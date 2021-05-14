@@ -1,0 +1,13 @@
+<div>
+  <h3>Login</h3>
+  <form [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
+    <mat-form-field >
+      <mat-label>Username</mat-label>
+      <input type="text" formControlName="login">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input type="password" formControlName="password">
+    </mat-form-field>
+  </form>
+</div>
