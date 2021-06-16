@@ -10,13 +10,16 @@ export class ApiService {
 
   private apiBase = "localhost:3000/api/";
   private loginRoute = this.apiBase + "login";
-  private logoutRoute = this.apiBase + "logout";
 
   constructor(private httpClient: HttpClient, private sessionData: SessionDataService) { }
 
 
-  public logout(): Observable<any> {
-    return this.httpClient.get<any>(this.logoutRoute);
+  public login(username: string, password: string): Observable<any> {
+    return this.httpClient.post(this.loginRoute,
+      {
+        "username": username,
+        "password": password
+      }, {observe: 'response'});
   }
   
 }

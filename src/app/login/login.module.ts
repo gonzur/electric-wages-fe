@@ -13,6 +13,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ReactiveFormsModule,
     MatFormFieldModule,
     CommonModule
+  ],
+  exports: [
+    LoginPageComponent,
   ]
 })
 export class LoginModule { }
