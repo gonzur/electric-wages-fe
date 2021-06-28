@@ -1,0 +1,14 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{report.reporter}}'s report for {{report.location}} 
+    </mat-panel-title>
+    <mat-panel-description>
+      {{report.date}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <div class="hours-box" *ngFor="let employeeHour of report.employeeHours">
+    <div>{{employeeHour.getEmployeeName()}}</div>
+    <div>{{employeeHour.getHours()}}</div>
+  </div>
+</mat-expansion-panel>
