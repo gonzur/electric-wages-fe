@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Report } from "./../../common-models/export";
 
 @Component({
   selector: 'app-report-panel',

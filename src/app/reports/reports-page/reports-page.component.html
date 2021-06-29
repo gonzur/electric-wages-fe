@@ -1,5 +1,12 @@
-<cdk-virtual-scroll-viewport>
-  <div *cdkVirtualFor="let report of reports">
-    <app-report-panel [report]="report"></app-report-panel>
+<div class="reports-box">
+  <div class="title-box">
+    <h3>Reports:</h3>
   </div>
-</cdk-virtual-scroll-viewport>
+  <mat-card class="card-box">
+    <cdk-virtual-scroll-viewport itemSize=50 class="example-viewport" >
+      <div *cdkVirtualFor="let report of reports; templateCacheSize: 0" class="example-item">
+        <app-report-panel [report]="report"></app-report-panel>
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </mat-card>
+</div>
